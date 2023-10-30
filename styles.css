@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ECF0F1;
+}
+
+.desktop-view {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+}
+
+.sidebar {
+    background-color: #E74C3C;
+    color: #FFFFFF;
+    padding: 20px;
+    height: 100vh;  /* Considers the whole viewport height.*/
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.main-content {
+    padding: 30px;
+    background-color: #e7c171;
+}
+
+.main-content h2, .main-content h3 {
+    color: #2C3E50;
+}
+
+.main-content a {
+    color: #E74C3C;
+    text-decoration: none;
+}
+
+.main-content a:hover {
+    text-decoration: underline;
+}
+
+.main-content img {
+    width: 100%;      /* Sets the picture width to the container's entire width. */
+    height: auto;     /* The aspect ratio of the picture is preserved.*/
+    display: block;   /* To avoid bottom space, makes the picture a block element. */
+    margin: 20px 0;   
+}
+
+/* This part arranges the Hamburger Menu Styling for the small window */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* This part handles the Responsive Styling for Small tabs */
+@media only screen and (max-width: 768px) {
+    .desktop-view {
+        grid-template-columns: 1fr;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        transition: 0.3s;
+        overflow-y: auto;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+    
+    .main-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* Midsize Devices (e.g., smaller desktops, large tablets) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu */
+    }
+    
+    .desktop-view {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;  /* This is used to Reset the positioning */
+        height: 100vh;     
+        background-color: #7ac5bc;
+        display: flex;
+        justify-content: space-around;  /* This part is essentioally divides the links */
+        align-items: center;
+        padding: 10px 0;  /* Adjusts the padding */
+    }
+    
+    .sidebar h2 {
+        display: none; /* Used to hide the JavaJam title depending on the size of the tab */
+    }
+
+    .sidebar ul {
+        display: flex;
+        gap: 20px; /* This function is used to create space between the links */
+        padding: 0;
+    }
+
+    .main-content {
+        margin: 0; 
+        padding-top: 40px; 
+    }
+}

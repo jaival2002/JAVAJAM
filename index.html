@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaJam Coffee House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="desktop-view">
+        <!-- This represents the hamburger menu for small tabs -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="sidebar">
+            <h2>JavaJam</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2>Welcome to JavaJam!</h2>         <!-- This function will basically be showing the body of the site with includes the Java Jam information and its attributes -->
+            <img src="kris-atomic-3b2tADGAWnU-unsplash.jpg" alt="">
+            <p>At JavaJam, enjoy the scent of freshly made coffee. We provide a large selection of beers, snacks, and musical evenings. Find your perfect spot, connect to our free Wi-Fi, and let the world drift away as you sip your favorite beverage.</p>
+            <h3>Our Specials:</h3>
+            <ul>
+                <li>JavaJam Brew - A time-honored favorite. </li>
+                <li>Mocha Magic - An espresso, chocolate, and creamy milk mix.</li>
+                <li>Whipped Cream Latte - Light and fluffy, this latte is ideal for individuals who enjoy a moderate coffee.</li>
+            </ul>
+            <p>Every Friday evening, join us for amazing music and wonderful company. Explore our <a href="#">music calendar</a> for upcoming events.</p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var sidebar = document.querySelector(".sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
